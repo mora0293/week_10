@@ -83,13 +83,70 @@ article div{
               Flexbox Styles
 ******************************************* */
 
-section:nth-last-of-type(1) article {
+section:nth-of-type(1) article {
 
     /* nth-of-type selects the the first element tha matches the type in this case, section */
 
-    display: flex;
+    /* display: flex, by default makes things sit next to each other */
 
+    display: flex;
 
 }
 
+section:nth-of-type(2) article {
+    display: flex;
+    flex-direction: row-reverse;
+    /* flex direction lets you control which way the elemenrs stack whether horizontally(row) or vertically(colum)- or in reverse */
 
+}
+section:nth-of-type(3) article {
+    /* we are using the article to target only the items not the h3 */
+    display: flex;
+/* justify-content allows you to control how elementts are distributed in their parent
+-flex-start and flex-end are defined based on reading direction of the user language
+- space-between puts an equal amount between elements
+-space-around will add a space in the border as well "eitherside of each element"
+space-evenly equaly distributes the elements in the available space
+*/
+    justify-content:space-evenly;
+}
+section:nth-of-type(4) article {
+    display: flex;
+ }
+ /* you can tell the flexed elemets to grow to take up the available space */
+section:nth-of-type(4) article div {
+    flex-grow: 1;
+  }
+
+  section:nth-of-type(4) article div:nth-of-type(2) {
+    /* tells the second div to take up twice as much space */
+    flex-grow: 2;
+  }
+/* *****************************************
+               Flexbox Nav Example
+******************************************* */
+
+nav ul{
+    display: flex;
+    /* you can tell the content to wrap if it doesn't fit */
+    flex-wrap: wrap;
+    /* for text based nav, distribute the content evenly... */
+    justify-content: space-evenly;
+}
+nav li{
+    /* tell the list items to grow ti fill the available space */
+    flex-grow: 1;
+    /* make the list items display flex so we can tell the a tags inside the fill */
+    display: flex;
+}
+
+nav ul a{
+    flex-grow: 1;
+    padding: 10px;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+nav ul a:hover{
+    background-color: rgb(15, 97, 103);
+}
