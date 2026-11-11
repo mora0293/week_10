@@ -47,3 +47,49 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* *****************************************
+              Main Styles
+******************************************* */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: beige;
+}
+
+h1{
+    font-size: 2.2em;
+    /* ems are relative to the current font size - default 16px >2.2em= 35.2;*/
+
+    padding: 0.5em;
+    /* because the font size is now 2.2em=35.2px >0.5 is 17.6px*/
+
+    margin-bottom: 1rem;
+    /* rem is always relative to the root size, in this case is always going to be 16px (default) */
+}
+
+h3{
+    font-size: 1.6em;
+    padding:0.5;
+}
+
+article div{
+    font-size: 2.2em;
+    padding: 10px;
+    border: 2px solid darkgreen;
+    background-color: lightgreen;
+}
+/* *****************************************
+              Flexbox Styles
+******************************************* */
+
+section:nth-last-of-type(1) article {
+
+    /* nth-of-type selects the the first element tha matches the type in this case, section */
+
+    display: flex;
+
+
+}
+
+
