@@ -168,6 +168,8 @@ nav ul a:hover{
         /* usejustify content to spread out the flexbox examples in main to take up the same amount of space as the larger aside */
         flex-direction: column;
         justify-content: space-between;
+        /* tell the main to come  */
+        order:2;
 
     }
     aside{
